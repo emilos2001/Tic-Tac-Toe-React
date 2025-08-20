@@ -18,7 +18,7 @@ export function CalculateWinner(board) {
     return null;
 }
 
-function compTurn(board){
+function compTurn(board, symbol){
     let compMove
     while (true) {
         compMove = Math.floor(Math.random() * 9) + 1
@@ -26,7 +26,7 @@ function compTurn(board){
             break
         }
     }
-    placeSymbol(board, compMove.toString(), 'Y')
+    placeSymbol(board, compMove.toString(), symbol)
     console.log(compMove)
 }
 
@@ -49,4 +49,5 @@ let board = [
 ];
 
 compTurn(board);
+
 console.log(board);
