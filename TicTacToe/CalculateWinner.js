@@ -17,37 +17,3 @@ export function CalculateWinner(board) {
     }
     return null;
 }
-
-function compTurn(board, symbol){
-    let compMove
-    while (true) {
-        compMove = Math.floor(Math.random() * 9) + 1
-        if (isValidMove(board, compMove)){
-            break
-        }
-    }
-    placeSymbol(board, compMove.toString(), symbol)
-    console.log(compMove)
-}
-
-function isValidMove(board, move){
-    const row = Math.floor((move + 1) % 3)
-    const col = (move + 1) / 3
-    return board[row][col] === ''
-}
-
-function placeSymbol(board, move, symbol){
-    const row = Math.floor((move + 1) % 3)
-    const col = (move + 1) / 3
-    return board[row][col] = symbol
-}
-
-let board = [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' ']
-];
-
-compTurn(board);
-
-console.log(board);
