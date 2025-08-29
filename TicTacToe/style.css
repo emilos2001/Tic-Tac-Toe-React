@@ -48,13 +48,16 @@ body{
 .messages,
 .restart-game{
     position: absolute;
+    align-items: center;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .player{
     color: #ffffff;
-    top: 65px;
+    top: 75px;
 }
+
 .turn{
     color: #ffffff;
     top: 115px;
@@ -91,6 +94,24 @@ body{
     height: 110px;
 }
 
+.score{
+    position: absolute;
+    bottom: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 15px);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.score h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.score img{
+    width: 30px;
+    height: 30px;
+}
 .restart-game{
     font: bold 1rem "Times New Roman", serif;
     width: 160px;
